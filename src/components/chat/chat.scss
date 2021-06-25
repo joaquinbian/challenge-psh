@@ -1,13 +1,27 @@
 .chatContainer {
-  background-color: #dcdcdc;
+  background-color: #d3d3d3;
   width: auto;
+  display: flex;
+  flex-direction: column;
 }
 .chat {
   margin: 1em;
   background-color: blue;
-  height: 90%;
+  height: 95%;
 }
 .formContainer {
   background-color: red;
-  height: auto;
+  // height: 15%;
+}
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input {
+  border-radius: 50px;
+  outline: none;
+  margin: 10px;
+  padding: 1%;
+  border-color: #eee;
 }

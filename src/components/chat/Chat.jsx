@@ -10,10 +10,12 @@ const Chat = () => {
       <div className="chat">
         <span>Hola soy el chat</span>
       </div>
-      <form className="formContainer" onSubmit={onSubmit}>
-        <input />
-        <button>send</button>
-      </form>
+      <div className="formContainer">
+        <form onSubmit={onSubmit} className="form">
+          <input placeholder="type your message..." className="input" />
+          <button>send</button>
+        </form>
+      </div>
     </div>
   );
 };
