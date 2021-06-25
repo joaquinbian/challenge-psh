@@ -25,7 +25,7 @@ const Chat = () => {
             onChange={handleChange}
             className="input"
           />
-          <button>send</button>
+          <button className="btn">send</button>
         </form>
       </div>
     </div>
