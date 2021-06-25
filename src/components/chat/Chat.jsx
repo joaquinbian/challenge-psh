@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./chat.scss";
 const Chat = () => {
+  const [message, setMessage] = useState("");
+
   const onSubmit = (e) => {
     e.preventDefault();
+    alert(message);
+
     console.log("me aprete");
+  };
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setMessage(value);
   };
   return (
     <div className="chatContainer">
@@ -12,7 +20,11 @@ const Chat = () => {
       </div>
       <div className="formContainer">
         <form onSubmit={onSubmit} className="form">
-          <input placeholder="type your message..." className="input" />
+          <input
+            placeholder="type your message..."
+            onChange={handleChange}
+            className="input"
+          />
           <button>send</button>
         </form>
       </div>
