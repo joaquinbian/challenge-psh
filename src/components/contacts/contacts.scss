@@ -1,0 +1,12 @@
+.chatContainer {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+  }
+  &:hover {
+    background-color: red;
+  }
+}

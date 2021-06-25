@@ -14,7 +14,7 @@ const Chat = () => {
     setMessage(value);
   };
   return (
-    <div className="chatContainer">
+    <div className="messagesContainer">
       <div className="chat">
         <span>Hola soy el chat</span>
       </div>

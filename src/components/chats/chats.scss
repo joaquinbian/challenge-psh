@@ -1,5 +1,7 @@
 .chatsContainer {
-  background-color: green;
+  // background-color: green;
   // width: 30rem;
   // align-self: flex-end;
+  display: flex;
+  flex-direction: column;
 }
