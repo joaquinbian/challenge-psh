@@ -1,10 +1,16 @@
 .chatContainer {
   display: flex;
   flex-direction: row;
+  padding: 1em;
+  border-bottom: 3px gray solid;
   img {
     width: 5em;
     height: 5em;
     border-radius: 50%;
+  }
+  p {
+    color: white;
+    margin-left: 1em;
   }
   &:hover {
     background-color: red;
