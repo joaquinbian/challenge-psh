@@ -3,6 +3,7 @@ import "./app.scss";
 import Chats from "./components/chats/Chats";
 import Chat from "./components/chat/Chat";
 import { contacts } from "./contacts";
+import { Provider } from "./context/context";
 
 function App() {
   const [selectedUser, setSelectedUser] = useState(contacts[0]);
@@ -17,8 +18,10 @@ function App() {
   return (
     <div className="container">
       <div className="appContainer">
-        <Chats contacts={contacts} selectUser={selectUser} />
-        <Chat selectedUser={selectedUser} />
+        <Provider>
+          <Chats />
+          <Chat />
+        </Provider>
       </div>
     </div>
   );

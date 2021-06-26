@@ -1,4 +1,4 @@
-.chatContainer {
+@mixin chatContainer {
   display: flex;
   flex-direction: row;
   padding: 1em;
@@ -12,7 +12,22 @@
     color: white;
     margin-left: 1em;
   }
+
   &:hover {
     background-color: red;
   }
+}
+
+.chatContainer {
+  @include chatContainer();
+}
+.contactName {
+  font-weight: bold;
+}
+.lastMsj {
+  color: gray;
+}
+.chatContainerSelected {
+  @include chatContainer();
+  border-right: 0.5em red solid;
 }

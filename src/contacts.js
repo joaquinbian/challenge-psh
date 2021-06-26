@@ -7,19 +7,25 @@ const contacts = [
     name: "Luciana Gutierrez",
     img: img1,
     msj: "hola como estas?",
+    ocupation: "Software Developer",
     msjReceived: [],
+    lastMsj: [],
   },
   {
-    name: "Laura Alvarez",
+    name: "Micaela Alvarez",
     img: img2,
     msj: "estas preparado para la reunion de hoy?",
+    ocupation: "Marketing Manager",
     msjReceived: [],
+    lastMsj: [],
   },
   {
     name: "Manuel Hoffmann",
     img: img3,
     msj: "chau",
+    ocupation: "DevOps",
     msjReceived: [],
+    lastMsj: [],
   },
 ];
 
