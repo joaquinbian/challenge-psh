@@ -1,6 +1,7 @@
 .messageContainer {
   //   background-color: honeydew;
   display: flex;
+  margin: 1em;
   img {
     width: 4em;
     height: 4em;
@@ -14,5 +15,16 @@
     background-color: #eee;
     border-radius: 15em;
     border: 1px black solid;
+  }
+}
+
+.msjUser {
+  display: flex;
+  //   justify-content: flex-end;
+  flex-direction: row-reverse;
+  img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
   }
 }

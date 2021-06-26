@@ -1,6 +1,12 @@
+.chatCont {
+  width: 100%;
+  max-height: 100vh;
+}
 .messagesContainer {
   background-color: #d3d3d3;
   width: auto;
+  height: 90%;
+  overflow: auto;
   display: flex;
   flex-direction: column;
 }
@@ -11,13 +17,16 @@
 }
 .formContainer {
   background-color: red;
+  height: 10%;
   // height: 15%;
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form {
   display: flex;
   justify-content: space-evenly;
+  width: 100em;
 }
 
 .input {

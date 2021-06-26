@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./app.scss";
 import Chats from "./components/chats/Chats";
 import Chat from "./components/chat/Chat";
-import contacts from "./contacts";
+import { contacts } from "./contacts";
 
 function App() {
   const [selectedUser, setSelectedUser] = useState(contacts[0]);
@@ -11,7 +11,7 @@ function App() {
 
   const selectUser = (name) => {
     const user = contacts.filter((u) => u.name === name);
-    setSelectedUser(user);
+    setSelectedUser({ ...user[0] });
   };
 
   return (
