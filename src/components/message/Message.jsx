@@ -3,7 +3,7 @@ import "./message.scss";
 
 const Message = ({ msj, img, msjReceived }) => {
   return (
-    <div>
+    <div className="msj">
       <div className="messageContainer">
         <img src={img} />
         <p>{msj}</p>

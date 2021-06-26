@@ -1,7 +1,5 @@
 .appContainer {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  flex-direction: row;
-  //   background-color: red;
+  grid-template-columns: 20% 80%;
   height: 100vh;
 }

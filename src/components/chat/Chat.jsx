@@ -11,6 +11,9 @@ const Chat = ({ selectedUser }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (!message) {
+      return alert("please write something before submit");
+    }
     const sendTo = contacts.filter((u) => u.name === name);
     console.log(sendTo, "SOY EL USER PAA");
     msjReceived.push({ msj: message, user });

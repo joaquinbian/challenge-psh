@@ -1,24 +1,22 @@
 .chatCont {
-  width: 100%;
+  // width: 100%;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
 }
 .messagesContainer {
   background-color: #d3d3d3;
-  width: auto;
+  // width: auto;
   height: 90%;
   overflow: auto;
   display: flex;
   flex-direction: column;
 }
-.chat {
-  margin: 1em;
-  background-color: #c2c2c2;
-  height: 95%;
-}
+
 .formContainer {
-  background-color: red;
+  background-color: #fff;
   height: 10%;
-  // height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +33,7 @@
   margin: 10px;
   height: 3em;
   width: 80%;
-  border-color: #eee;
+  border: #d3d3d3 1px solid;
 }
 
 .btn {
