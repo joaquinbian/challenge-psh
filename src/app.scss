@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+$font: "Montserrat";
+p {
+  font-family: $font;
+}
 .appContainer {
   display: grid;
   grid-template-columns: 20% 80%;

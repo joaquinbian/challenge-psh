@@ -26,8 +26,10 @@
 }
 .lastMsj {
   color: gray;
+  // max-height: 3em;
+  // overflow: hidden;
 }
 .chatContainerSelected {
   @include chatContainer();
-  border-right: 0.5em red solid;
+  border-right: 4px red solid;
 }

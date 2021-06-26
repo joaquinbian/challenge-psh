@@ -1,3 +1,19 @@
+@mixin text {
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  white-space: normal;
+  // color: red;
+  font-weight: bold;
+  max-width: 40%;
+  padding: 1em;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  background-color: #eee;
+  border-radius: 50px;
+  border: 1px black solid;
+}
+
 .mjs {
   width: auto;
 }
@@ -12,17 +28,7 @@
     border-radius: 50%;
   }
   p {
-    height: auto;
-    width: auto;
-    overflow: hidden;
-    white-space: normal;
-    max-width: 40%;
-    padding: 1em;
-    margin-top: 1em;
-    margin-left: 0.5em;
-    background-color: #eee;
-    border-radius: 50px;
-    border: 1px black solid;
+    @include text();
   }
 }
 
@@ -36,19 +42,10 @@
     border-radius: 50%;
   }
   p {
-    width: auto;
-    height: auto;
-    max-width: 40%;
-    white-space: nowrap;
+    @include text();
     overflow-wrap: break-word;
 
-    overflow: hidden;
+    // overflow: hidden;
     white-space: normal;
-    padding: 1em;
-    margin-top: 0;
-    margin-right: 0.5em;
-    background-color: #eee;
-    border-radius: 50px;
-    border: 1px black solid;
   }
 }

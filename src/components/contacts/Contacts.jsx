@@ -9,6 +9,11 @@ const Contacts = ({ name, img, msj }) => {
   // }, [selectedUser]);
 
   // console.log(msj);
+  const lastMsj = msj.length
+    ? msj[0].length < 15
+      ? msj[0]
+      : `${msj[0].substr(0, 15)}...`
+    : "";
 
   return (
     <section
@@ -20,7 +25,7 @@ const Contacts = ({ name, img, msj }) => {
       <img src={img} />
       <div>
         <p className="contactName">{name}</p>
-        <p className="lastMsj">{msj.length ? msj[0] : ""}</p>
+        <p className="lastMsj">{lastMsj}</p>
       </div>
     </section>
   );
