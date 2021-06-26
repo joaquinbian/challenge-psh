@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./chat.scss";
+import Message from "../message/Message";
+
 const Chat = ({ selectedUser }) => {
   const [message, setMessage] = useState("");
+  const { name, img, msj } = selectedUser[0];
+
+  console.log(name, "soy yo");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +21,7 @@ const Chat = ({ selectedUser }) => {
   return (
     <div className="messagesContainer">
       <div className="chat">
-        <span>Hola soy el </span>
+        <Message msj={msj} img={img} />
       </div>
       <div className="formContainer">
         <form onSubmit={onSubmit} className="form">
