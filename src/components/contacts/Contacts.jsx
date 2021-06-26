@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./contacts.scss";
-const Contacts = ({ name, img }) => {
-  const presentation = () => {
-    console.log(`hola soy ${name}`);
-  };
+const Contacts = ({ name, img, selectUser }) => {
+  // const setUser = () => {
+  //   setSelectedUser(name);
+  // };
 
   return (
-    <section className="chatContainer" onClick={presentation}>
+    <section className="chatContainer" onClick={() => selectUser(name)}>
       <img src={img} />
       <p>{name}</p>
     </section>

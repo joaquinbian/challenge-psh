@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./chat.scss";
-const Chat = () => {
+const Chat = ({ selectedUser }) => {
   const [message, setMessage] = useState("");
 
   const onSubmit = (e) => {
@@ -16,7 +16,7 @@ const Chat = () => {
   return (
     <div className="messagesContainer">
       <div className="chat">
-        <span>Hola soy el chat</span>
+        <span>Hola soy el </span>
       </div>
       <div className="formContainer">
         <form onSubmit={onSubmit} className="form">
