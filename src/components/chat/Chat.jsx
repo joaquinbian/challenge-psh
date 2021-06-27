@@ -10,15 +10,27 @@ const Chat = () => {
   const { selectedUser } = useContext(AppContext);
   const { name, img, msj, msjReceived, lastMsj } = selectedUser;
 
+  const getTime = () => {
+    const today = new Date();
+    const hours =
+      today.getHours() < 10 ? `0${today.getHours()}` : today.getHours();
+    const minutes =
+      today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
+
+    const time = today.getHours() <= 12 && today.getHours() > 0 ? "AM" : "PM";
+
+    return `${hours}:${minutes} ${time}`;
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (!message) {
       return alert("please write something before submit");
     }
 
-    msjReceived.push({ msj: message, user });
+    msjReceived.push({ msj: message, user, hour: getTime() });
     lastMsj.pop();
-    lastMsj.push(message);
+    lastMsj.push({ msj: message, hour: getTime() });
     setMessage("");
   };
   const handleChange = (e) => {
@@ -41,7 +53,9 @@ const Chat = () => {
             className="input"
             value={message}
           />
-          <button className="btn">send</button>
+          <button className="btn">
+            <p>SEND</p>
+          </button>
         </form>
       </div>
     </div>
