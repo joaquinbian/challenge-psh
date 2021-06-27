@@ -1,14 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
+import { contacts } from "../../contacts";
 import AppContext from "../../context/context";
 import "./contacts.scss";
 const Contacts = ({ name, img, msj }) => {
-  const { selectUser, selectedUser } = useContext(AppContext);
-  // const { lastMsj } = selectedUser;
-  // useEffect(() => {
-  //   console.log(msj);
-  // }, [selectedUser]);
-
-  // console.log(msj);
+  const { selectUser, selectedUser, sidebar, setSidebar } = useContext(
+    AppContext
+  );
+  const contactsHandler = (name) => {
+    selectUser(name);
+    setSidebar(!sidebar);
+  };
   const lastMsj = msj.length
     ? msj[0].length < 15
       ? msj[0]
@@ -16,18 +17,18 @@ const Contacts = ({ name, img, msj }) => {
     : "";
 
   return (
-    <section
+    <div
       className={
         selectedUser.name === name ? "chatContainerSelected" : "chatContainer"
       }
-      onClick={() => selectUser(name)}
+      onClick={() => contactsHandler(name)}
     >
       <img src={img} />
       <div>
         <p className="contactName">{name}</p>
         <p className="lastMsj">{lastMsj}</p>
       </div>
-    </section>
+    </div>
   );
 };
 export default Contacts;

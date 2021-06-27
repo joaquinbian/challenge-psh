@@ -22,3 +22,24 @@
     margin-top: 0.5em;
   }
 }
+
+@media (max-width: 990px) {
+  // .chatHeaderContainer {
+  //   background-color: #fff;
+  //   display: flex;
+  //   padding: 2em;
+  //   //   justify-content: center;
+  //   img {
+  //     width: 7em;
+  //     height: 7em;
+  //     border-radius: 50%;
+  //     margin-right: 4em;
+  //   }
+  // }
+  .hamburger {
+    align-self: center;
+    width: 2em;
+    height: 2em;
+    margin-right: 2em;
+  }
+}

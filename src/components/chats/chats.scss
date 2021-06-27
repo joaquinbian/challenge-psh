@@ -1,8 +1,24 @@
-.chatsContainer {
+.sidebar {
   // background-color: green;
   // width: 30rem;
   // align-self: flex-end;
   display: flex;
   flex-direction: column;
   background-color: #423a39;
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #423a39;
+    transition: left 300ms ease-out;
+  }
+  .sidebar.active {
+    left: 0;
+    background-color: #423a39;
+  }
 }

@@ -9,3 +9,8 @@ p {
   grid-template-columns: 20% 80%;
   height: 100vh;
 }
+@media (max-width: 990px) {
+  .appContainer {
+    display: flex;
+  }
+}

@@ -1,5 +1,5 @@
 .chatCont {
-  // width: 100%;
+  width: 100%;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
 }
 .messagesContainer {
   background-color: #d3d3d3;
-  // width: auto;
+  width: auto;
   height: 90%;
   overflow: auto;
   display: flex;
@@ -42,4 +42,37 @@
   align-self: center;
   border-radius: 1em;
   border: none;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .hamburger {
+    display: flex;
+  }
+  // .chatCont {
+  //   // width: auto;
+  //   // max-height: 100vh;
+  //   display: flex;
+  //   flex-direction: column;
+  //   background-color: red;
+  // }
+  // .messagesContainer {
+  //   background-color: red;
+  //   width: 100vh;
+  //   height: 90%;
+  //   max-height: 100vh;
+  //   overflow: auto;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+  // .formContainer {
+  //   background-color: #fff;
+  //   height: 6em;
+  //   width: auto;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
 }

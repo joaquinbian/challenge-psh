@@ -22,3 +22,16 @@
     display: swap;
   }
 }
+.closeSidebar {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .closeSidebar {
+    display: flex;
+    color: white;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 2em;
+  }
+}

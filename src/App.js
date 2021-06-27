@@ -8,7 +8,7 @@ import { Provider } from "./context/context";
 function App() {
   const [selectedUser, setSelectedUser] = useState(contacts[0]);
 
-  console.log(selectedUser, "soy el user");
+  // console.log(selectedUser, "soy el user");
 
   const selectUser = (name) => {
     const user = contacts.filter((u) => u.name === name);

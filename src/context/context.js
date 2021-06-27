@@ -4,6 +4,7 @@ import { contacts, user } from "../contacts";
 const AppContext = createContext();
 const Provider = ({ children }) => {
   const [selectedUser, setSelectedUser] = useState(contacts[0]);
+  const [sidebar, setSidebar] = useState(false);
 
   const selectUser = (name) => {
     const user = contacts.filter((u) => u.name === name);
@@ -16,6 +17,8 @@ const Provider = ({ children }) => {
     },
     selectedUser,
     selectUser,
+    sidebar,
+    setSidebar,
   };
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
