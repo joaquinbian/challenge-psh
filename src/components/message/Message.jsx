@@ -4,13 +4,13 @@ import "./message.scss";
 const Message = ({ msj, img, msjReceived }) => {
   return (
     <div className="msj">
-      <div className="messageContainer">
+      <div className="messageContainer arrow-left">
         <img src={img} />
         <p>{msj}</p>
       </div>
       {msjReceived &&
         msjReceived.map(({ msj, user }, i) => (
-          <div key={i} className="msjUser">
+          <div key={i} className="msjUser arrow-right">
             <img src={user.img} />
             <p>{msj}</p>
           </div>
