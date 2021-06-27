@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+$font: "Montserrat";
 @mixin text {
   height: auto;
   width: auto;
@@ -49,24 +52,45 @@
 .msjUser {
   @include msjContainers();
   flex-direction: row-reverse;
+  font-family: $font;
+  // font-size: x-small;
   p {
     @include text();
     overflow-wrap: break-word;
     margin-right: 1em;
+    font-size: medium;
 
     // overflow: hidden;
     white-space: normal;
+  }
+  img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+  }
+  .msjHour {
+    // display: flex;
+    background-color: transparent;
+    position: absolute;
+    top: -2em;
+    margin-left: -15px;
+    font-family: $font;
+    font-size: x-small;
+  }
+  .msjHour::after {
+    // content: normal;
+    display: none;
   }
 }
 .msjUser.arrow-right ::after {
   content: " ";
   position: absolute;
   //
-  right: 4.6em;
+  right: 4.5em;
   top: 21px;
   border-top: 15px solid #eee;
   border-right: 15px solid #eee;
   border-bottom: 10px solid transparent;
   border-left: 5px solid transparent;
-  transform: rotate(45deg);
+  transform: rotate(40deg);
 }

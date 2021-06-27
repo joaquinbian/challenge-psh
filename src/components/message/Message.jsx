@@ -9,10 +9,13 @@ const Message = ({ msj, img, msjReceived }) => {
         <p>{msj}</p>
       </div>
       {msjReceived &&
-        msjReceived.map(({ msj, user }, i) => (
+        msjReceived.map(({ msj, user, hour }, i) => (
           <div key={i} className="msjUser arrow-right">
             <img src={user.img} />
-            <p>{msj}</p>
+            <p>
+              {msj}
+              <p className="msjHour">{hour}</p>
+            </p>
           </div>
         ))}
     </div>
