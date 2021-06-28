@@ -1,12 +1,15 @@
 import React from "react";
 import "./message.scss";
 
-const Message = ({ msj, img, msjReceived }) => {
+const Message = ({ msj: { msj, hour }, img, msjReceived }) => {
   return (
     <div className="msj">
       <div className="messageContainer arrow-left">
         <img src={img} alt="profileimg" />
-        <p>{msj}</p>
+        <p>
+          {msj}
+          <p className="msjHourContact">{hour}</p>
+        </p>
       </div>
       {msjReceived &&
         msjReceived.map(({ msj, user, hour }, i) => (

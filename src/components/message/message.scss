@@ -11,7 +11,7 @@ $font: "Montserrat";
   max-width: 40%;
   padding: 1em;
   margin-top: 1em;
-  background-color: #eee;
+  // background-color: #eee;
   border-radius: 5px;
 }
 
@@ -33,7 +33,23 @@ $font: "Montserrat";
   @include msjContainers();
   p {
     @include text();
+    background-color: #eee;
     margin-left: 1em;
+  }
+  .msjHourContact {
+    // display: flex;
+    background-color: transparent;
+    position: absolute;
+    top: -2em;
+    // margin-right: 100px;
+    // margin-right: 10;
+    margin-left: -20px;
+    font-family: $font;
+    font-size: x-small;
+  }
+  .msjHourContact::after {
+    // content: normal;
+    display: none;
   }
 }
 .messageContainer.arrow-left::after {
@@ -59,7 +75,7 @@ $font: "Montserrat";
     overflow-wrap: break-word;
     margin-right: 1em;
     font-size: medium;
-
+    background-color: #fde5e5;
     // overflow: hidden;
     white-space: normal;
   }
@@ -88,8 +104,8 @@ $font: "Montserrat";
   //
   right: 4.5em;
   top: 21px;
-  border-top: 15px solid #eee;
-  border-right: 15px solid #eee;
+  border-top: 15px solid #fde5e5;
+  border-right: 15px solid #fde5e5;
   border-bottom: 10px solid transparent;
   border-left: 5px solid transparent;
   transform: rotate(40deg);

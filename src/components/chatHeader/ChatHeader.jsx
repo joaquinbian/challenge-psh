@@ -3,7 +3,8 @@ import AppContext from "../../context/context";
 import { RiContactsFill } from "react-icons/ri";
 import "./chatHeader.scss";
 const ChatHeader = ({ selectedUser }) => {
-  const { img, name, ocupation } = selectedUser;
+  const { img, name, job } = selectedUser;
+  console.log(selectedUser);
   const { setSidebar, sidebar } = useContext(AppContext);
   return (
     <div className="chatHeaderContainer">
@@ -14,7 +15,7 @@ const ChatHeader = ({ selectedUser }) => {
       <img src={img} alt="profileimg" />
       <div className="infoContainer">
         <p className="name">{name}</p>
-        <p className="work">{ocupation}</p>
+        <p className="job">{job}</p>
       </div>
     </div>
   );

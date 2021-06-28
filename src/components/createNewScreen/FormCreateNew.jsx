@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
 import AppContext from "../../context/context";
-import img from "../../assets/avatar-4.png";
+import img from "../../assets/img/avatar-4.png";
 import "./formCreateNew.scss";
-import { Redirect } from "react-router";
+import getTime from "../../assets/getDate";
 
 const validate = (input) => {
   const errors = {};
-  if (!input.name || !input.surname || !input.ocupation || !input.msj) {
+  if (!input.name || !input.surname || !input.job || !input.msj) {
     errors.name = input.name ? "" : "name is required ";
     errors.surname = input.surname ? "" : "surname is required";
-    errors.occupation = input.ocupation ? "" : "occupation is required";
+    errors.job = input.job ? "" : "occupation is required";
     errors.msj = input.msj ? "" : "message is required";
   }
   return errors;
@@ -18,13 +18,17 @@ const FormCreateNew = () => {
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
-    ocupation: "",
+    job: "",
     msj: "",
   });
 
   const [errors, setErrors] = useState({});
 
   const { addContact } = useContext(AppContext);
+
+  const resetState = () => {
+    setFormData({ name: "", surname: "", job: "", msj: "" });
+  };
   const handleFormChange = (e) => {
     const { value, name } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -36,7 +40,14 @@ const FormCreateNew = () => {
     let valid = true;
     for (let clave in errors) {
       if (errors[clave].length > 0) {
-        valid = false;
+        return alert("please fix your errors before submit");
+      } else {
+        continue;
+      }
+    }
+    for (let clave in formData) {
+      if (formData[clave].length < 1) {
+        return alert("please, fill all the inputs before submit");
       } else {
         continue;
       }
@@ -44,6 +55,7 @@ const FormCreateNew = () => {
     if (valid) {
       const contact = {
         ...formData,
+        msj: { msj: formData.msj, hour: getTime() },
         msjReceived: [],
         name: `${formData.name} ${formData.surname}`,
         img,
@@ -51,11 +63,7 @@ const FormCreateNew = () => {
       };
       addContact(contact);
       alert("contactAdded");
-      setTimeout(() => {
-        return <Redirect to="/home" />;
-      }, 2000);
-    } else {
-      alert("please fix your errors before submit");
+      return resetState();
     }
   };
   return (
@@ -66,50 +74,58 @@ const FormCreateNew = () => {
             <p>Name</p>
           </label>
           <input
+            value={formData.name}
             type="text"
             className="inputForm"
             name="name"
             onChange={handleFormChange}
           />
-          {errors.name ? <p>{errors.name}</p> : ""}
+          {errors.name ? <p className="error">{errors.name}</p> : ""}
         </div>
         <div className="inputContainer">
           <label>
             <p>Surname</p>
           </label>
           <input
+            value={formData.surname}
             type="text"
             className="inputForm"
             name="surname"
             onChange={handleFormChange}
           />
-          {errors.surname ? <p>{errors.surname}</p> : ""}
+          {errors.surname ? <p className="error">{errors.surname}</p> : ""}
         </div>
         <div className="inputContainer">
           <label>
-            <p>Occupation</p>
+            <p>job</p>
           </label>
           <input
             type="text"
+            value={formData.job}
             className="inputForm"
-            name="ocupation"
+            name="job"
             onChange={handleFormChange}
           />
-          {errors.ocupation ? <p>{errors.ocupation}</p> : ""}
+          {errors.job ? <p className="error">{errors.job}</p> : ""}
         </div>
         <div className="inputContainer">
           <label>
-            <p>msj</p>
+            <p>Message</p>
           </label>
           <textarea
             type="text"
+            value={formData.msj}
             className="inputForm"
             name="msj"
             onChange={handleFormChange}
           />
-          {errors.msj ? <p>{errors.msj}</p> : ""}
+          {errors.msj ? <p className="error">{errors.msj}</p> : ""}
         </div>
-        <button type="submit">SUBMIT</button>
+        <div className="submitContainer">
+          <button type="submit">
+            <p>SUBMIT</p>
+          </button>
+        </div>
       </form>
     </div>
   );

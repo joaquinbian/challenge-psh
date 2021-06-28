@@ -3,22 +3,23 @@ import "./chat.scss";
 import Message from "../message/Message";
 import ChatHeader from "../chatHeader/ChatHeader";
 import { user } from "../../contacts";
+import getTime from "../../assets/getDate";
 
 const Chat = ({ selectedUser }) => {
   const [message, setMessage] = useState("");
   const { img, msj, msjReceived, lastMsj } = selectedUser;
 
-  const getTime = () => {
-    const today = new Date();
-    const hours =
-      today.getHours() < 10 ? `0${today.getHours()}` : today.getHours();
-    const minutes =
-      today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
+  // const getTime = () => {
+  //   const today = new Date();
+  //   const hours =
+  //     today.getHours() < 10 ? `0${today.getHours()}` : today.getHours();
+  //   const minutes =
+  //     today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes();
 
-    const time = today.getHours() <= 12 && today.getHours() > 0 ? "AM" : "PM";
+  //   const time = today.getHours() <= 12 && today.getHours() > 0 ? "AM" : "PM";
 
-    return `${hours}:${minutes} ${time}`;
-  };
+  //   return `${hours}:${minutes} ${time}`;
+  // };
 
   const onSubmit = (e) => {
     e.preventDefault();

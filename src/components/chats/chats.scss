@@ -2,24 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: #423a39;
-}
-
-@media (max-width: 990px) {
-  .sidebar {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #423a39;
-    transition: left 200ms ease-out;
-  }
-  .sidebar.active {
-    z-index: 1;
-    left: 0;
-    background-color: #423a39;
-  }
+  overflow-x: auto;
 }
 .createNewContainer {
   display: flex;
@@ -39,5 +22,25 @@
   &:hover {
     cursor: pointer;
     background-color: rgb(44, 38, 38);
+  }
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #423a39;
+    text-decoration: none;
+    transition: left 200ms ease-out;
+  }
+  .sidebar.active {
+    z-index: 1;
+    left: 0;
+    overflow-x: auto;
+    background-color: #423a39;
   }
 }
