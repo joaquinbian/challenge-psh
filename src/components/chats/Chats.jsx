@@ -23,7 +23,7 @@ const Chats = ({ selectUser, selectedUser }) => {
             selectUser={selectUser}
           />
         ))}
-        <Link to="form">
+        <Link to="/form" className="link">
           <div className="createNewContainer">
             <HiOutlinePlus className="plusIcon" />
             <p className="text">Create new</p>

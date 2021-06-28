@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import { contacts } from "../../contacts";
 import AppContext from "../../context/context";
 import "./contacts.scss";
 const Contacts = ({ name, img, msj, selectedUser, selectUser }) => {

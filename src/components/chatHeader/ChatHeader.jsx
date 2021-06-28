@@ -4,7 +4,6 @@ import { RiContactsFill } from "react-icons/ri";
 import "./chatHeader.scss";
 const ChatHeader = ({ selectedUser }) => {
   const { img, name, job } = selectedUser;
-  console.log(selectedUser);
   const { setSidebar, sidebar } = useContext(AppContext);
   return (
     <div className="chatHeaderContainer">

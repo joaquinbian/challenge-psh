@@ -19,12 +19,15 @@
     height: 2em;
     width: 2em;
   }
+
   &:hover {
     cursor: pointer;
     background-color: rgb(44, 38, 38);
   }
 }
-
+.link {
+  text-decoration: none;
+}
 @media (max-width: 990px) {
   .sidebar {
     z-index: 1;
