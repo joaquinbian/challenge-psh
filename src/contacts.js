@@ -12,7 +12,7 @@ const contacts = [
     msj: { msj: "hola como estas?", hour: time },
     job: "Software Developer",
     msjReceived: [],
-    lastMsj: [],
+    lastMsj: [{ msj: "hola como estas?", hour: time }],
   },
   {
     name: "Micaela Alvarez",
@@ -20,7 +20,7 @@ const contacts = [
     msj: { msj: "estas preparado para la reunion de hoy?", hour: time },
     job: "Marketing Manager",
     msjReceived: [],
-    lastMsj: [],
+    lastMsj: [{ msj: "estas preparado para la reunion de hoy?", hour: time }],
   },
   {
     name: "Manuel Hoffmann",
@@ -28,7 +28,7 @@ const contacts = [
     msj: { msj: "Hola! Como va tu dia?", hour: time },
     job: "DevOps",
     msjReceived: [],
-    lastMsj: [],
+    lastMsj: [{ msj: "Hola! Como va tu dia?", hour: time }],
   },
 ];
 

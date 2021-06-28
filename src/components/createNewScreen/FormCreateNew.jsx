@@ -32,6 +32,9 @@ const FormCreateNew = () => {
   const handleFormChange = (e) => {
     const { value, name } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+  const handleBlur = (e) => {
+    const { value, name } = e.target;
     setErrors(validate({ ...formData, [name]: value }));
   };
 
@@ -59,7 +62,7 @@ const FormCreateNew = () => {
         msjReceived: [],
         name: `${formData.name} ${formData.surname}`,
         img,
-        lastMsj: [],
+        lastMsj: [{ msj: formData.msj, hour: getTime() }],
       };
       addContact(contact);
       alert("contactAdded");
@@ -79,6 +82,7 @@ const FormCreateNew = () => {
             className="inputForm"
             name="name"
             onChange={handleFormChange}
+            onBlur={handleBlur}
           />
           {errors.name ? <p className="error">{errors.name}</p> : ""}
         </div>
@@ -92,6 +96,7 @@ const FormCreateNew = () => {
             className="inputForm"
             name="surname"
             onChange={handleFormChange}
+            onBlur={handleBlur}
           />
           {errors.surname ? <p className="error">{errors.surname}</p> : ""}
         </div>
@@ -105,6 +110,7 @@ const FormCreateNew = () => {
             className="inputForm"
             name="job"
             onChange={handleFormChange}
+            onBlur={handleBlur}
           />
           {errors.job ? <p className="error">{errors.job}</p> : ""}
         </div>
@@ -118,6 +124,7 @@ const FormCreateNew = () => {
             className="inputForm"
             name="msj"
             onChange={handleFormChange}
+            onBlur={handleBlur}
           />
           {errors.msj ? <p className="error">{errors.msj}</p> : ""}
         </div>
