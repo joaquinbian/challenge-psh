@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./chats.scss";
 import Header from "./Header";
 import Contacts from "../contacts/Contacts";

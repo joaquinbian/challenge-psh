@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 // import { contacts } from "../../contacts";
 import AppContext from "../../context/context";
 import "./contacts.scss";
@@ -25,7 +25,7 @@ const Contacts = ({ name, img, msj, selectedUser, selectUser }) => {
       }
       onClick={() => contactsHandler(name)}
     >
-      <img src={img} />
+      <img src={img} alt="profileimg" />
       <div>
         <div className="msjInfo">
           <p className="contactName">{name}</p>

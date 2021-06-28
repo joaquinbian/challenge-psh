@@ -10,7 +10,7 @@ const NavForm = () => {
     <nav className="nav">
       <BiArrowBack className="backIcon" onClick={() => history.goBack()} />
       <div className="navContainer">
-        <img src={img} />
+        <img src={img} alt="logo" />
         <p>React form</p>
       </div>
     </nav>

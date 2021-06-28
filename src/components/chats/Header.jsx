@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <section className="chatsHeader">
       <section className="sectionHeader">
-        <img src={img} />
+        <img src={img} alt="logo" />
         <p>React Chat</p>
         <AiOutlineClose
           className="closeSidebar"

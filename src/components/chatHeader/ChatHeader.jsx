@@ -11,7 +11,7 @@ const ChatHeader = ({ selectedUser }) => {
         className="hamburger"
         onClick={() => setSidebar(!sidebar)}
       />
-      <img src={img} />
+      <img src={img} alt="profileimg" />
       <div className="infoContainer">
         <p className="name">{name}</p>
         <p className="work">{ocupation}</p>

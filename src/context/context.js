@@ -1,8 +1,5 @@
 import React, { useState, createContext } from "react";
-import { contacts, user } from "../contacts";
-import img1 from "../assets/avatar-1.png";
-import img3 from "../assets/avatar-2.png";
-import img2 from "../assets/avatar-3.png";
+import { contacts } from "../contacts";
 
 const AppContext = createContext();
 

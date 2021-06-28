@@ -1,14 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./chat.scss";
 import Message from "../message/Message";
 import ChatHeader from "../chatHeader/ChatHeader";
 import { user } from "../../contacts";
-// import AppContext from "../../context/context";
 
 const Chat = ({ selectedUser }) => {
   const [message, setMessage] = useState("");
-  // const { selectedUser } = useContext(AppContext);
-  const { name, img, msj, msjReceived, lastMsj } = selectedUser;
+  const { img, msj, msjReceived, lastMsj } = selectedUser;
 
   const getTime = () => {
     const today = new Date();

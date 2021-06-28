@@ -5,13 +5,13 @@ const Message = ({ msj, img, msjReceived }) => {
   return (
     <div className="msj">
       <div className="messageContainer arrow-left">
-        <img src={img} />
+        <img src={img} alt="profileimg" />
         <p>{msj}</p>
       </div>
       {msjReceived &&
         msjReceived.map(({ msj, user, hour }, i) => (
           <div key={i} className="msjUser arrow-right">
-            <img src={user.img} />
+            <img src={user.img} alt="profileimg" />
             <p>
               {msj}
               <p className="msjHour">{hour}</p>
