@@ -1,28 +1,20 @@
 import React, { useState } from "react";
 import "./app.scss";
-import Chats from "./components/chats/Chats";
-import Chat from "./components/chat/Chat";
-import { contacts } from "./contacts";
+// import Chats from "./components/chats/Chats";
+// import Chat from "./components/chat/Chat";
+import MainPage from "./components/mainPage/MainPage";
+import FormCreateNew from "./components/createNewScreen/CreateNewScreen";
+// import { contacts } from "./contacts";
 import { Provider } from "./context/context";
+import { Route, Router, Switch } from "react-router-dom";
 
 function App() {
-  const [selectedUser, setSelectedUser] = useState(contacts[0]);
-
-  // console.log(selectedUser, "soy el user");
-
-  const selectUser = (name) => {
-    const user = contacts.filter((u) => u.name === name);
-    setSelectedUser({ ...user[0] });
-  };
-
   return (
     <div className="container">
-      <div className="appContainer">
-        <Provider>
-          <Chats />
-          <Chat />
-        </Provider>
-      </div>
+      <Provider>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/form" component={FormCreateNew} />
+      </Provider>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  height: 95%;
+}
+.formNewContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #c2c2c2;
+  border-radius: 5%;
+  //   height: auto;
+  width: 40%;
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  input {
+    border-radius: 50px;
+    width: 20em;
+  }
+  button {
+    margin: 0.5em;
+  }
+}
+@media (max-width: 990px) {
+  .formNewContainer {
+    width: 80%;
+  }
+}

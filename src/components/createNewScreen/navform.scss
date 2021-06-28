@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(144, 33, 40, 1) 0%,
+    rgba(214, 18, 26, 1) 44%
+  );
+  height: 5%;
+  // padding: 0.5em;
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  width: 30%;
+  p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  img {
+    margin-right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+.backIcon {
+  position: absolute;
+  align-self: flex-start;
+  left: 1em;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+// .navContainer p {
+//   margin: 0;
+//   color: white;
+//   font-weight: bold;
+//   font-size: 1.5em;
+// }

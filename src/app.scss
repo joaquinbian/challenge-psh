@@ -1,16 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-$font: "Montserrat";
-p {
-  font-family: $font;
-}
-.appContainer {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: 100vh;
-}
-@media (max-width: 990px) {
-  .appContainer {
-    display: flex;
-  }
+// $font: "Montserrat";
+// p {
+//   font-family: $font;
+// }
+// .appContainer {
+//   display: grid;
+//   grid-template-columns: 20% 80%;
+//   height: 100vh;
+// }
+// @media (max-width: 990px) {
+//   .appContainer {
+//     display: flex;
+//   }
+//
+html {
+  max-height: 100vh;
+  max-height: 100vh;
 }

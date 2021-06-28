@@ -3,11 +3,11 @@ import "./chat.scss";
 import Message from "../message/Message";
 import ChatHeader from "../chatHeader/ChatHeader";
 import { user } from "../../contacts";
-import AppContext from "../../context/context";
+// import AppContext from "../../context/context";
 
-const Chat = () => {
+const Chat = ({ selectedUser }) => {
   const [message, setMessage] = useState("");
-  const { selectedUser } = useContext(AppContext);
+  // const { selectedUser } = useContext(AppContext);
   const { name, img, msj, msjReceived, lastMsj } = selectedUser;
 
   const getTime = () => {
@@ -33,17 +33,17 @@ const Chat = () => {
     lastMsj.push({ msj: message, hour: getTime() });
     setMessage("");
   };
+
   const handleChange = (e) => {
     const { value } = e.target;
     setMessage(value);
   };
+
   return (
     <div className="chatCont">
       <ChatHeader selectedUser={selectedUser} />
       <div className="messagesContainer">
-        {/* <div className="chat"> */}
         <Message msj={msj} img={img} msjReceived={msjReceived} />
-        {/* </div> */}
       </div>
       <div className="formContainer">
         <form onSubmit={onSubmit} className="form">

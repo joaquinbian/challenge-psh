@@ -1,7 +1,4 @@
 .sidebar {
-  // background-color: green;
-  // width: 30rem;
-  // align-self: flex-end;
   display: flex;
   flex-direction: column;
   background-color: #423a39;
@@ -22,5 +19,25 @@
     z-index: 1;
     left: 0;
     background-color: #423a39;
+  }
+}
+.createNewContainer {
+  display: flex;
+  justify-content: center;
+  .text {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+  }
+
+  .plusIcon {
+    align-self: center;
+    color: white;
+    height: 2em;
+    width: 2em;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(44, 38, 38);
   }
 }
