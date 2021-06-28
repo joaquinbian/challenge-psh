@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 $font: "Montserrat";
-@mixin text {
+@mixin text($bgColor) {
   height: auto;
   width: auto;
   overflow: hidden;
-  // position: relative;
   white-space: normal;
   font-weight: bold;
   max-width: 40%;
   padding: 1em;
   margin-top: 1em;
-  // background-color: #eee;
+  background-color: $bgColor;
   border-radius: 5px;
+  box-shadow: 3px 3px 15px #888888;
 }
 
 @mixin msjContainers {
@@ -32,30 +32,25 @@ $font: "Montserrat";
 .messageContainer {
   @include msjContainers();
   p {
-    @include text();
-    background-color: #eee;
+    @include text(#eee);
     margin-left: 1em;
   }
   .msjHourContact {
-    // display: flex;
     background-color: transparent;
     position: absolute;
     top: -2em;
-    // margin-right: 100px;
-    // margin-right: 10;
     margin-left: -20px;
     font-family: $font;
     font-size: x-small;
+    box-shadow: none;
   }
   .msjHourContact::after {
-    // content: normal;
     display: none;
   }
 }
 .messageContainer.arrow-left::after {
   content: " ";
   position: absolute;
-  //
   left: 4.5em;
   top: 22px;
   border-top: 5px solid transparent;
@@ -69,14 +64,11 @@ $font: "Montserrat";
   @include msjContainers();
   flex-direction: row-reverse;
   font-family: $font;
-  // font-size: x-small;
   p {
-    @include text();
+    @include text(#fde5e5);
     overflow-wrap: break-word;
     margin-right: 1em;
     font-size: medium;
-    background-color: #fde5e5;
-    // overflow: hidden;
     white-space: normal;
   }
   img {
@@ -85,23 +77,21 @@ $font: "Montserrat";
     border-radius: 50%;
   }
   .msjHour {
-    // display: flex;
     background-color: transparent;
     position: absolute;
     top: -2em;
     margin-left: -15px;
     font-family: $font;
     font-size: x-small;
+    box-shadow: none;
   }
   .msjHour::after {
-    // content: normal;
     display: none;
   }
 }
 .msjUser.arrow-right ::after {
   content: " ";
   position: absolute;
-  //
   right: 4.5em;
   top: 21px;
   border-top: 15px solid #fde5e5;

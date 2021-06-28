@@ -1,7 +1,7 @@
-@mixin chatContainer {
+@mixin chatContainer($padding) {
   display: flex;
   flex-direction: row;
-  padding: 1em 0em 1em 1em;
+  padding: $padding;
   align-items: center;
   border-bottom: 3px gray solid;
   img {
@@ -21,10 +21,10 @@
 }
 
 .chatContainer {
-  @include chatContainer();
+  @include chatContainer(1em 0 1em 1em);
 }
 .chatContainerSelected {
-  @include chatContainer();
+  @include chatContainer(1em 0 1em 1em);
   border-right: 4px red solid;
 }
 .contactName {
@@ -39,10 +39,48 @@
 .msjInfo {
   display: flex;
   margin-top: -0.9em;
-  // margin: 0;
 }
 .hour {
   font-size: 0.8em;
   margin: 0;
   align-self: center;
+}
+
+@media (max-width: 990px) {
+  .chatContainer {
+    @include chatContainer(1.5em 0 1.5em 1.5em);
+    img {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+    p {
+      color: white;
+      font-size: 1.3em;
+    }
+
+    &:hover {
+      background-color: rgb(44, 38, 38);
+      cursor: pointer;
+    }
+  }
+  .chatContainerSelected {
+    @include chatContainer(1.5em 0 1.5em 1.5em);
+    img {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+    p {
+      color: white;
+      font-size: 1.3em;
+    }
+
+    &:hover {
+      background-color: rgb(44, 38, 38);
+      cursor: pointer;
+    }
+  }
 }

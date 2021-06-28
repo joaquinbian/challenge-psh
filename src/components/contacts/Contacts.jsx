@@ -5,7 +5,6 @@ import "./contacts.scss";
 const Contacts = ({ name, img, msj, selectedUser, selectUser }) => {
   const { sidebar, setSidebar } = useContext(AppContext);
 
-  console.log("me renderizo");
   const contactsHandler = (name) => {
     selectUser(name);
     setSidebar(!sidebar);

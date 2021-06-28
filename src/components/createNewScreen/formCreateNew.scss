@@ -24,7 +24,12 @@
   padding: 2em;
   input {
     border-radius: 50px;
-    width: 20em;
+  }
+  input,
+  textarea {
+    width: 50%;
+    height: 2em;
+    outline: none;
   }
 }
 .submitContainer {
@@ -47,6 +52,13 @@
 }
 @media (max-width: 990px) {
   .formNewContainer {
-    width: 80%;
+    width: 85%;
+  }
+  .inputContainer {
+    input,
+    textarea {
+      width: 70%;
+      height: 2.5em;
+    }
   }
 }
