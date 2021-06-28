@@ -34,6 +34,11 @@
   height: 3em;
   width: 80%;
   border: #d3d3d3 1px solid;
+  &::placeholder {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.1em;
+  }
 }
 
 .btn {

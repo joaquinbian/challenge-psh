@@ -35,7 +35,7 @@ const Chat = ({ selectedUser }) => {
       <div className="formContainer">
         <form onSubmit={onSubmit} className="form">
           <input
-            placeholder="type your message..."
+            placeholder="Type your message..."
             onChange={handleChange}
             className="input"
             value={message}
