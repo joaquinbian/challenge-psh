@@ -16,7 +16,7 @@ const contacts = [
   },
   {
     name: "Micaela Alvarez",
-    img: img2,
+    img: img3,
     msj: { msj: "estas preparado para la reunion de hoy?", hour: time },
     job: "Marketing Manager",
     msjReceived: [],
@@ -24,7 +24,7 @@ const contacts = [
   },
   {
     name: "Manuel Hoffmann",
-    img: img3,
+    img: img2,
     msj: { msj: "Hola! Como va tu dia?", hour: time },
     job: "DevOps",
     msjReceived: [],
